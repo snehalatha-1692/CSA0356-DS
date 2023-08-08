@@ -1,0 +1,10 @@
+# include<stdio.h>
+int main()
+{
+	int a=6,b=4,temp=0;
+	a=temp;
+	a=b;
+	b=temp;
+	printf("%dis fibonacci");
+return 0;
+}

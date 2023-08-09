@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int findDuplicate(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if (arr[i] == arr[j]) {
+                return arr[i];
+            }
+        }
+    }
+    return -1; // No duplicate found
+}
+
+int main() {
+    int size;
+
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+
+    int arr[size];
+
+    printf("Enter elements of the array:\n");
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int duplicate = findDuplicate(arr, size);
+
+    if (duplicate != -1) {
+        printf("Duplicate value: %d\n", duplicate);
+    } else {
+        printf("No duplicate found in the array.\n");
+    }
+
+    return 0;
+}
